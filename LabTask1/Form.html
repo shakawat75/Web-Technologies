@@ -1,0 +1,104 @@
+<html>
+<body style="background-color:#ffe6e6;">
+
+
+<h4 > <span style="color:red;"> * </span> -Denotes Required Information</h4>
+<span> >1 donation</span><span style="margin-left:15.0em">>2 confirmation</span><span style="margin-left:35.0em">>3 Thank You! </span>
+<h2 style="color:red;"> Donor Information </h2>
+<center>
+<table>
+<tr><td align="right"><b>First Name</b><span style="color:red;">*</span></td>
+<td align="left"><input type = "text" id="dt" value=""></td></tr>
+<tr><td align="right"><b>Last Name</b><span style="color:red;">*</span></td>
+<td align = "left"><input type = "text" id="dt" value=""></td></tr>
+<tr><td align = "right"><b>Company</b><span style="color:red;">*</span></td>
+<td align = "left"><input type = "text" id="dt" value=""></td></tr>
+<tr><td align= "right"><b>Address 1</b><span style="color:red;">*</span></td>
+<td align="left"><input type = "text" id="dt" value=""></td></tr>
+<tr><td align="left"><b>Address 2</b><span style="color:red;">*</span></td>
+<td align = "right"><input type = "text" id="dt" value=""></td></tr>
+<tr><td align = "right"><b>City</b><span style="color:red;">*</span></td>
+<td aling="left"><input type = "text" id="dt" value=""></td></tr>
+<tr><td align = "right"><b>State</b><span style="color:red">*</span></td>
+<td align = "left"><select name="st" id="state" >
+<option value="Select State">Select a state</option>
+<option value="volvo">Volvo</option>
+</select></td></tr>
+<tr><td align = "right"><b>Zip Code</b><span style="color:red">*</span></td>
+<td align = "left"><input type="text"></td></tr>
+<tr><td align = "right"><b>Country</b><span style="color:red">*</span></td>
+<td align = "left" ><select name="country" id="country">
+<option value="country">Select a country</option>
+<option value="country">Bangladesh</option
+</select></td>
+<tr><td align = "right"><b>Phone</b><span style="color:red">*</span></td>
+<td align = "left"><input type= "text"></td></tr>
+<tr><td align = "right"><b>Fax</b><span style="color:red">*</span></td>
+<td align="left"><input type= "text"></td></tr>
+<tr><td align = "right"><b>Email</b><span style="color:red">*</span></td>
+<td align = "left"><input type= "text"></td></tr>
+</table>
+</center>
+<center>
+<label for="dn amount"><b>Donation amount</b><span style="color:red">*</span><span style="color:black">(check a button or type in your amount)</span></label>
+<input type = "radio" id="none" name="amount" value="none">
+<label for="none">None</label>
+<input type = "radio" id="50" name="amount" value="50">
+<label for="50">$50</label>
+<input type = "radio" id="75" name="amount" value="75">
+<label for="75">$75</label>
+<input type = "radio" id="100" name="amount" value="100">
+<label for="100">$100</label>
+<input type = "radio" id="250" name="amount" value="250">
+<label for="250">$250</label>
+<input type = "radio" id="other" name="amount" value="other">
+<label for="other">Other</label><br>
+<label for="Other amount"><b>Other Amount $</b></label>
+<input type="text"><br>
+<label for="recurring donation"><b>Recurring Donation</b><span>(check if yes)</span></label>
+<input type="checkbox" id="interested" name="interested" value="interested">
+<label for="interested">I am interested in giving on a regular basis</label><br>
+<label for="monthly">Monthly Credit Card $</label><input type="text"><label for="for">For</label><input type="text"><label for="months">Months</label>
+</center>
+
+
+<h2 style="color:red;">Honararium and Memorial Donation Information</h2>
+
+<center>
+<table>
+<tr><td align="right"><b>I would like to make this donation</b></td>
+<td align="left"><input type="radio" id="like" name="I would like"<label for="To Honor">To Honor</label></td></tr>
+<tr><td align="right"></td><td><input type="radio" id="memory" name="I would like"><label for="memory">In memory of</label></td></tr>
+<tr><td align="right"><b>Name</b></td><td align="left"><input type="text"></td></tr>
+<tr><td align = "right"><b>Acknowledge Donation To</b></td><td align="left"><input type="text"></td></tr>
+<tr><td align = "right"><b>Address</b></td><td align="left"><input type="text"></td></tr>
+<tr><td align="right"><b>City</b></td><td align="left"><input type="text"><br>
+<tr><td align="right"><b>State</b></td><td align="left"><select name="state" id="state"><option value="state">Select a state</option></select></td></tr>
+<tr><td align="right"><b>Zip</b></td><td><input type="text"></td></tr>
+</table>
+</center>
+
+<h2 style="color:red;">Additional Information</h2>
+<p>Please enter your name,company or organization as you would like it to appear in your publications</p>
+<center><label for="Name"><b>Name</b></label><input type="text"><br></center>
+<input type="checkbox"><label>I would like to remain my gift anonymous</label><br>
+<input type="checkbox"><label>My employer offers a matching gift program.I will mail the matching gift form.</label><br>
+<input type="checkbox"><label>Please save the cost of acknowledging gift by not mailing a thank you letter</label><br>
+<label><b style="margin-left:20.0em">Comments</b>(Please type any question or feedback here)</label><br>
+<textarea style="margin-left:40.0em"id="comment" name="comment" rows="6" cols="50"></textarea><br>
+<label><b style="margin-left:20.0em">How may we contact you?</b></label>
+<input style="margin-left:2.3em" type="checkbox"><label>E-mail</label><br>
+<input style="margin-left:40.0em" type="checkbox"><label>Postal Mail</label><br>
+<input style="margin-left:40.0em" type="checkbox"><label>Telephone</label><br>
+<input style="margin-left:40.0em" type="checkbox"><label>Fax</label><br>
+<h4 style="color:#999999;">I would like to receive newsletter and information about special events by:</h4>
+<input style="margin-left:40.0em" type="checkbox"><label>E-mail</label><br>
+<input style="margin-left:40.0em" type="checkbox"><label>Postal Mail</label><br>
+<input type="checkbox"><label>I would like information about volunteering with the<label><br>
+<button style="margin-left:35em"type="button">Reset</button><span> &nbsp&nbsp</span><button type="button">Continue</button><br>
+<img src="C:\Users\Admin\Pictures\Screenshots\Lock.png" width="20" height="20"><span>Donate online with the confidence. You are on a secure server.</span>
+
+<h5>If you have any problems or questions, please contact <label style="color:#999999;">support.</label></h5>
+
+</body>
+</html>
