@@ -3,9 +3,10 @@
 <body>
  
 
-<?php $name = $email = $dd = $mm = $yyyy = $gender = $ssc = $hsc = $bsc = $msc =  "";
+<?php $name = $email = $gender = $ssc = $hsc = $bsc = $msc = $bg = "";
+$dd = $mm = $yyyy = "";
 $name_err = $email_err = $db_err =  $gender_err = $degree_err = $bg_err = ""; 
-$EmptyArr = [];  
+$EmptyArr = [];$degree = [];
 $count = 0; 
 
  
@@ -38,7 +39,8 @@ $count = 0;
 	  $db_err = "Date of birth required";
   else{
 	  $dd = test_input($_POST["dd"]);$mm = test_input($_POST["mm"]); $yyyy = test_input($_POST["yyyy"]);
-	  if(!preg_match("/[1-31]/",$dd) || !preg_match("/[1-12]/",$mm) || !preg_match("/[1953-1998]/",$yyyy))
+	  $dd_err = "";
+	  if(!ereg("[1-31]",(int)$dd) || !ereg("[1-12]",(int)$mm) || !ereg("[1953-1998]",(int)$yyyy))
 	  {$db_err = "Invalid Date";
 		$dd = $mm = $yyyy = "";}
   }
@@ -51,12 +53,17 @@ $count = 0;
 	if(empty($_POST["check"])||count($_POST["check"])<2)
 		$degree_err = "degree required(at least two)";
 	else
+	{
 		$degree_err = "";
+	    $degree = $_POST["check"];
+	}
 	
-	if(isset($_POST['BG']))
+	if(empty($_POST['BG']))
 		$bg_err = "Blood Group Required";
-	else
+	else{
 		$bg_err = " ";
+		$bg = $_POST['BG'];
+	}
 		
   
 	  
@@ -106,10 +113,10 @@ $count = 0;
  
  <fieldset style="margin-left:300px;width:300px; height:120px">
   <legend><b>DEGREE</b></legend>
-  <input type="checkbox" id = "ssc" name="check[]" value = "ssc">SSC &nbsp 
-  <input type="checkbox" id = "hsc" name="check[]" value = "hsc">HSC &nbsp 
-  <input type="checkbox" id = "bsc" name="check[]" value = "bsc" >BSc &nbsp 
-  <input type="checkbox" id = "msc" name="check[]" value = "msc" >MSc
+  <input type="checkbox"  name="check[]" value = "ssc">SSC &nbsp 
+  <input type="checkbox"  name="check[]" value = "hsc">HSC &nbsp 
+  <input type="checkbox"  name="check[]" value = "bsc" >BSc &nbsp 
+  <input type="checkbox"  name="check[]" value = "msc" >MSc
   
 
   <hr/>
@@ -123,7 +130,7 @@ $count = 0;
   <option value="A+">A+</option>
   <option value="B+">B+</option>
   <option value="AB+">AB+</option>
-  <option value="O+">O-</option>
+  <option value="O+">O+</option>
   <option value="A-">A-</option>
   <option value="B-">B-</option>
   <option value="AB-">AB-</option>
@@ -136,6 +143,26 @@ $count = 0;
   <input type="submit">
  </fieldset>
  </form>
+ 
+ <?php
+echo "<h2>Your Input:</h2>";
+echo "<b>Name:</b>$name";
+echo "<br>";
+echo "<b>Email:</b>$email";
+echo "<br>";
+echo "<b>DOB:</b>";
+if($dd !=0  && $mm!= 0 && $yyyy!=0)
+echo "$dd $mm $yyyy";
+echo "<br>";
+echo "<b>Gender:</b>$gender";
+echo "<br>";
+echo "<b>Blood Group:</b>$bg<br>";
+echo "<b>Degree:</b>";
+foreach($degree as $val)
+{
+	echo "$val<br>";
+}
+?>
 
   
 
